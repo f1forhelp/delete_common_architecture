@@ -19,11 +19,13 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: UiHelper.horizontalPadding(
         child: Column(
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CustomTextFormField(
               hintText: "Enter User Name",
             ),
+            UiHelper.h4(),
             CustomTextButton(
               ontap: () {
                 Navigator.pushNamed(context, BaseDashboardScreen.id);
