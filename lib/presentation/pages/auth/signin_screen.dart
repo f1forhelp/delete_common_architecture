@@ -1,3 +1,4 @@
+import 'package:basic_structure/presentation/widgets/textfields/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -14,8 +15,8 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [
-          Text(""),
+        children: const [
+          CustomTextFormField(),
         ],
       ),
     );
