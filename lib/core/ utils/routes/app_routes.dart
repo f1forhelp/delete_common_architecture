@@ -1,9 +1,8 @@
-import 'package:basic_structure/%20utils/routes/error_route.dart';
 import 'package:basic_structure/presentation/pages/auth/signin/signin_screen.dart';
 import 'package:basic_structure/presentation/pages/dashboard/base_dashboard_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../presentation/pages/auth/signin/signin_screen.dart';
+import 'error_route.dart';
 
 class AppRoutes {
   static String? getInitialRoute() {

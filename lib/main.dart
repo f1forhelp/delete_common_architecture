@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_init.dart';
-import ' utils/routes/app_routes.dart';
+import 'core/ utils/routes/app_routes.dart';
 
 void main() {
   AppInit.initGetIt();

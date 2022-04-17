@@ -1,8 +1,9 @@
-import 'package:basic_structure/%20utils/constants/k_time.dart';
 import 'package:basic_structure/data/datasources/auth/auth_source.dart';
 import 'package:basic_structure/data/models/response/login_response/login_response.dart';
 import 'package:basic_structure/data/models/request/login_request/login_request.dart';
 import 'package:dio/dio.dart';
+
+import '../../../core/ utils/constants/k_time.dart';
 
 class AuthRemoteResource implements AuthSource {
   @override
