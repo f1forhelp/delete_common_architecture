@@ -1,3 +1,4 @@
+import 'package:basic_structure/presentation/pages/temp/screen1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_init.dart';
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
           }
         },
         child: MaterialApp(
-          onGenerateRoute: AppRoutes.generateRoutes,
-          initialRoute: AppRoutes.getInitialRoute(),
+          // onGenerateRoute: AppRoutes.generateRoutes,
+          // initialRoute: AppRoutes.getInitialRoute(),
+          home: Screen1(),
         ),
       ),
     );
