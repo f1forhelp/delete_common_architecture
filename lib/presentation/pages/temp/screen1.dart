@@ -6,6 +6,8 @@ import 'package:basic_structure/presentation/widgets/buttons/custom_text_button.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../widgets/miscellaneous/base_provider.dart';
+
 class Screen1 extends StatefulWidget {
   static const String id = "Screen1";
   const Screen1({Key? key}) : super(key: key);
@@ -22,7 +24,7 @@ class _Screen1State extends State<Screen1> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseView<Screen1Cubit>(
+    return BaseProvider<Screen1Cubit>(
       onStateReady: (p0) {
         p0.incrementy(5);
       },
@@ -65,37 +67,6 @@ class _Screen1State extends State<Screen1> {
     );
   }
 }
-
-class BaseView<T extends StateStreamableSource<Object?>>
-    extends StatefulWidget {
-  final Function(T)? onStateReady;
-  final Widget? child;
-  BaseView({this.onStateReady, this.child});
-  @override
-  _BaseViewState<T> createState() => _BaseViewState<T>();
-}
-
-class _BaseViewState<T extends StateStreamableSource<Object?>>
-    extends State<BaseView<T>> {
-  T state = AppInit.getIt<T>();
-  @override
-  void initState() {
-    if (widget.onStateReady != null) {
-      widget.onStateReady!(state);
-    }
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider<T>.value(
-      value: state,
-      child: widget.child,
-    );
-  }
-}
-
-
 
 
 
